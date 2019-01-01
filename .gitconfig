@@ -1,0 +1,28 @@
+[user]
+    email = nikki.thurmond@gmail.com
+    name = skittytittles
+[color]
+    ui = auto
+[core]
+    excludesfile = /usr/local/google/home/kcnicole/.gitignore_global
+    pager = less -FMRiX
+[alias]
+    dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+    llog = log --oneline @{upstream}..HEAD
+    llp = log -p @{upstream}..HEAD
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lsd = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    st = status
+    ci = commit
+    co = checkout
+    fu = fetch upstream
+[rebase]
+    autosquash = true
+[receive]
+    denyCurrentBranch = warn
+[google]
+    upling = true
+[http]
+[merge]
+    tool = vimdiff
+[credential]

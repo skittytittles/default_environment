@@ -1,0 +1,59 @@
+source ~/.env-functions
+source ~/.env-functions
+
+alias ~='cd ~;l'
+alias l='ls -altc'
+alias ea='vim ~/.aliases'
+alias sa='source ~/.aliases'
+alias ee='vim ~/.env-functions'
+alias se='source ~/.env-functions'
+alias u='cd ..;ls'
+alias tarb='tar -vxjf'
+alias targ='tar -zxvf'
+
+#########################################
+################## Git ##################
+#########################################
+
+alias sg='sa'
+alias g='cd ~/git-repos;ls'
+alias gr='git rebase'
+alias grc='git rebase --continue'
+alias grs='git rebase --skip'
+alias gra='git rebase --abort'
+alias gri='git rebase --interactive'
+alias grm='gri master'
+alias gb='git branch'
+alias gl='git lsd'
+alias gs='git status'
+alias gd='git diff'
+alias gdh='git diff HEAD'
+alias gdh-='git diff HEAD~'
+alias gdm='git diff master'
+alias gcb='git co -b'
+alias gaa='git add --all'
+alias gco='git co'
+alias gc='git commit -am'
+alias gca='git commit --amend'
+alias gci='git commit -am "iterating"'
+alias gp='git pull'
+# alias gbd='git branch -D'
+alias grh='git reset --hard'
+alias grhu='gco master;grh upstream/master;git push origin +master'
+alias gfu='git fu'
+#########################################
+################# Tmux ##################
+#########################################
+
+alias tm="tmux attach || tumx new-session \; \
+                split-window -v -l 24 \; split-window -h -l 84 \; select-pane -t 1 \; split-window -h -l 84 \; \
+                select-pane -t 0 \; \
+                split-window -v -l 24 \; split-window -h -l 84 \; select-pane -t 1 \; split-window -h -l 84 \; \
+                select-pane -t 0 \;"
+alias tml="tmux list-sessions"
+alias tma="tmux attach-session -t"
+alias tmc="clear && tmux clear-history"
+alias tmk="tmux kill-session"
+alias tmd="tmux detach-client"
+alias tmr="tmux rename-session"
+

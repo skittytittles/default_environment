@@ -11,6 +11,17 @@ alias u='cd ..;ls'
 alias tarb='tar -vxjf'
 alias targ='tar -zxvf'
 
+alias break='gcc \
+        -m32 \
+        -fno-stack-protector \
+        -z execstack \
+        -Wl,-z,norelro \
+        -mpreferred-stack-boundary=2 \
+        -no-pie \
+        -fno-pie \
+        -ggdb'
+
+
 #########################################
 ################## Git ##################
 #########################################
@@ -45,11 +56,7 @@ alias gfu='git fu'
 ################# Tmux ##################
 #########################################
 
-alias tm="tmux attach || tumx new-session \; \
-                split-window -v -l 24 \; split-window -h -l 84 \; select-pane -t 1 \; split-window -h -l 84 \; \
-                select-pane -t 0 \; \
-                split-window -v -l 24 \; split-window -h -l 84 \; select-pane -t 1 \; split-window -h -l 84 \; \
-                select-pane -t 0 \;"
+alias tm="tmux attach || tmux new-session"
 alias tml="tmux list-sessions"
 alias tma="tmux attach-session -t"
 alias tmc="clear && tmux clear-history"

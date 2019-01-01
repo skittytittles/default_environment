@@ -91,3 +91,5 @@ bindkey "^[[1;2C" forward-word
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
+source ~/.aliases
+tm
